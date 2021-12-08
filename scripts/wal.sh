@@ -24,6 +24,6 @@ else
 
   # Set background
   if [ -x "$(command -v feh)" ]; then
-    feh --randomize --bg-fill /usr/share/backgrounds/*
+    feh --randomize --bg-fill $HOME/.config/leftwm/themes/current/backgrounds/*
   fi
 fi
