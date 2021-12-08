@@ -141,6 +141,13 @@ ctrl + alt + w
 ctrl + alt + e
     arcolinux-tweak-tool
 
+
+#mc
+ctrl + alt + n
+    alacritty -e mc
+
+
+
 #conky-rotate
 ctrl + alt + Next
      conky-rotate -n
