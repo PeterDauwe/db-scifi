@@ -21,7 +21,7 @@ sh $SCRIPTPATH/scripts/wal.sh
 #  leftwm-command "LoadTheme "$SCRIPTPATH"/config/config-azerty.toml"
 #else
 #  cp "$SCRIPTPATH"/config/config-qwerty.toml ~/.config/leftwm/config.toml
-#  leftwm-command "LoadTheme "$SCRIPTPATH"/config/config-querty.toml"
+#  leftwm-command "LoadTheme "$SCRIPTPATH"/config/config-qwerty.toml"
 #fi
 
 # keybindings daemon
