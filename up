@@ -26,14 +26,14 @@ sh $SCRIPTPATH/scripts/wal.sh
 
 # keybindings daemon
 # put your personal keybinds inside your theme and use those
-if [ -f "$SCRIPTPATH/sxhkd/sxhkdrc" ] ; then
+#if [ -f "$SCRIPTPATH/sxhkd/sxhkdrc" ] ; then
   # check if there is a keybinds-folder inside your personal theme and use it
   # to use the standard keybinds, delete the dir sxhkd inside your theme
-  sxhkd -c ~/.config/leftwm/themes/current/sxhkd/sxhkdrc & 
-else
+#  sxhkd -c ~/.config/leftwm/themes/current/sxhkd/sxhkdrc & 
+#else
   # standard keybinds
   sxhkd -c ~/.config/leftwm/sxhkd/sxhkdrc &
-fi    
+#fi    
 
 # diversity of apps to start
 nm-applet &
