@@ -1,27 +1,6 @@
-border_width = 6
+border_width = 2
 margin = [4, 4]
-default_border_color = "#161315"
-floating_border_color = "#015BC0"
-focused_border_color = "#c3a8bf"
 
-
-col1 = "#B66B6B"
-col2 = "#0B3789"
-col3 = "#1554AC"
-col4 = "#0356B5"
-col5 = "#625298"
-col6 = "#015BC0"
-col7 = "#c3a8bf"
-col8 = "#887585"
-col9 = "#B66B6B"
-col10 = "#0B3789"
-col11 = "#1554AC"
-col12 = "#0356B5"
-col13 = "#625298"
-col14 = "#015BC0"
-col15 = "#c3a8bf"
-
-
-
-background = "#161315"
-foreground = "#c3a8bf"
+default_border_color = "#bd93f9"
+floating_border_color = "#bd93f9"
+focused_border_color = "#ff79c6"

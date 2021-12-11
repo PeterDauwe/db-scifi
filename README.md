@@ -1,4 +1,4 @@
-# Leftwm-theme db-scifi
+# Leftwm-theme db-pywal
 
 
 # Get the theme to implement in your system
@@ -7,9 +7,8 @@
 
 
 # Changed some stuff in up !!!!!!!!!!!!!
-	- config.toml will be changed according to your keyboard layout 
-	- if you have personal keybinds put them in sxhkd directory,
-		if not the standard will be used.
+	- if you have personal keybinds put them in sxhkd directory inside your theme,
+	those will be added to the standard, BE AWARE for double keybinds!!!!!!
 	- background is changed on every login or reload.
 	- backgrounds are in the theme
 	- polybar is split into two bars : polybartop , polybarbottom.
