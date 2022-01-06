@@ -1,4 +1,7 @@
 #!/bin/bash
+
+GTK_THEME=elementary
+
 export SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
 # Down the last running theme
@@ -56,6 +59,8 @@ fi
 
 #Set the theme.toml config
 echo "LoadTheme $SCRIPTPATH/theme.toml" > $XDG_RUNTIME_DIR/leftwm/commands.pipe
+
+
 
 #mainbar
 index=0
