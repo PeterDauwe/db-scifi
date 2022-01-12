@@ -1,7 +1,5 @@
 #!/bin/bash
 
-GTK_THEME=elementary
-
 export SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
 # Down the last running theme
