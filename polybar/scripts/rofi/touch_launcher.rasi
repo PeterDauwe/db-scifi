@@ -6,6 +6,7 @@ configuration {
     fullscreen:                     false;
 	hide-scrollbar: 				true;
 	sidebar-mode: 					false;
+    font:                           "Noto sans 10";
 
 }
 
@@ -17,13 +18,13 @@ configuration {
 }
 
 window {
-      transparency:                   "real";
+    
     background-color:               #101010A9;
     text-color:                      #eeeeee;
 	border:							0;
 	border-color:					 @ac;
     border-radius:                  5px;
-	width:							600px;
+	width:							900px;
     location:                       southwest;
     x-offset:                       8;
     y-offset:                       -40;
@@ -35,10 +36,11 @@ prompt {
 }
 
 entry {
-    background-color:               @transparent;
+    background-color:               #000000;
+    text-color:                     white;
     placeholder:                    "Type to search";
-    text-color:                     @foreground;
-    font:                           "SauceCodePro Nerd Font Semibold 13";
+        margin:                         0% 0% 0% 0%;
+    padding:                        1.5% 5.5%;
     expand:                         false;
     blink:                          true;
 }
