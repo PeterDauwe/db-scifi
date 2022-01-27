@@ -58,8 +58,6 @@ fi
 #Set the theme.toml config
 leftwm-command "LoadTheme $SCRIPTPATH/theme.toml"
 
-
-
 #mainbar
 index=0
 monitors=($(polybar -m | sed s/:.*//))
