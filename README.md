@@ -1,4 +1,4 @@
-# Leftwm-theme db-pywal
+# Leftwm-theme db-scifi
 
 
 # Get the theme to implement in your system
