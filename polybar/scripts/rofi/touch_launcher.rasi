@@ -1,0 +1,87 @@
+configuration {
+    modi:                           "drun";
+    display-drun:                   "Applications";
+    show-icons:                     true;
+    disable-history:                false;
+    fullscreen:                     false;
+	hide-scrollbar: 				true;
+	sidebar-mode: 					false;
+
+}
+
+@import "colors.rasi"
+
+* {
+  background-color: @al;
+  text-color: #eeeeee;
+}
+
+window {
+      transparency:                   "real";
+    background-color:               #101010A9;
+    text-color:                      #eeeeee;
+	border:							0;
+	border-color:					 @ac;
+    border-radius:                  8;
+	width:							600px;
+    location:                       southwest;
+    x-offset:                       8;
+    y-offset:                       -40;
+}
+
+prompt {
+	background-color: 				@transparent;
+	text-color: 					@foreground;
+}
+
+entry {
+    background-color:               @transparent;
+    placeholder:                    "Type to search";
+    text-color:                     @foreground;
+    font:                           "SauceCodePro Nerd Font Semibold 13";
+    expand:                         false;
+}
+
+#inputbar {
+	children: 						[ entry ];
+    padding:                        15px;
+	background-color: 				@transparent;
+}
+
+#listview {
+    background-color:               @transparent;
+    padding:                        0px;
+    columns:                        5;
+    lines:                          3;
+    spacing:                        0px;
+    cycle:                          true;
+    dynamic:                        true;
+    layout:                         vertical;
+}
+
+#element {
+    background-color:               @transparent;
+    text-color:                     @foreground;
+    orientation:                    vertical;
+    border-radius:                  8;
+    padding:                        20px 15px;
+}
+
+#element-icon {
+    size:                           64px;
+    border:                         0px;
+}
+
+#element-text {
+    expand:                         false;
+    width:                          64px;
+    horizontal-align:               0.6;
+    highlight:                      None #8be9fd; 
+}
+
+#element.selected {
+    background-color:               @selected-background;
+    text-color:                     @selected-foreground;
+	border:							0;
+    border-radius:                  8;
+}
