@@ -2,7 +2,7 @@ configuration {
     modi:                           "drun";
     display-drun:                   "Applications";
     show-icons:                     true;
-    disable-history:                false;
+    disable-history:                true;
     fullscreen:                     false;
 	hide-scrollbar: 				true;
 	sidebar-mode: 					false;
@@ -22,7 +22,7 @@ window {
     text-color:                      #eeeeee;
 	border:							0;
 	border-color:					 @ac;
-    border-radius:                  8;
+    border-radius:                  5px;
 	width:							600px;
     location:                       southwest;
     x-offset:                       8;
@@ -40,48 +40,73 @@ entry {
     text-color:                     @foreground;
     font:                           "SauceCodePro Nerd Font Semibold 13";
     expand:                         false;
+    blink:                          true;
 }
 
-#inputbar {
+inputbar {
 	children: 						[ entry ];
     padding:                        15px;
-	background-color: 				@transparent;
+    background-color:               #00000000;
+    text-color:                     @bg;
+    expand:                         false;
+        border:                         0% 0% 0% 0%;
+    border-radius:                  0px;
+    border-color:                   @ac;
+    margin:                         0% 0% 0% 0%;
+    padding:                        1.5%;
+
 }
 
-#listview {
+listview {
     background-color:               @transparent;
     padding:                        0px;
     columns:                        5;
     lines:                          3;
     spacing:                        0px;
-    cycle:                          true;
+    cycle:                          false;
     dynamic:                        true;
     layout:                         vertical;
 }
 
-#element {
-    background-color:               @transparent;
-    text-color:                     @foreground;
-    orientation:                    vertical;
-    border-radius:                  8;
-    padding:                        20px 15px;
+mainbox {
+    background-color:               @al;
+    border:                         0% 0% 0% 0%;
+    border-radius:                  0% 0% 0% 0%;
+    border-color:                   @al;
+    children:                       [ inputbar, listview ];
+    spacing:                        0%;
+    padding:                        0%;
 }
 
-#element-icon {
-    size:                           64px;
+
+element {
+    background-color:               @al;
+    text-color:                     #eeeeee;
+    orientation:                    vertical;
+    border-radius:                  5%;
+    padding:                        2% 1% 2% 1%;
+}
+
+element-icon {
+    size:                           32px;
     border:                         0px;
 }
 
-#element-text {
+element-text {
     expand:                         false;
-    width:                          64px;
-    horizontal-align:               0.6;
-    highlight:                      None #8be9fd; 
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    margin:                         0.5% 0.5% -0.5% 0.5%;
 }
 
-#element.selected {
-    background-color:               @selected-background;
-    text-color:                     @selected-foreground;
-	border:							0;
-    border-radius:                  8;
+element selected {
+    background-color:               @sa;
+    text-color:                     #ffffff;
+    border:                         0% 0% 0% 0%;
+    border-radius:                  12px;
+    border-color:                   @al;
+}
+
+element-text selected {
+    text-color:                     @ac;
 }
