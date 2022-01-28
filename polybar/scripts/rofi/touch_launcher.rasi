@@ -19,7 +19,7 @@ configuration {
 
 window {
     
-    background-color:               #101010A9;
+    background-color:               #101010;
     text-color:                      #eeeeee;
 	border:							0;
 	border-color:					 @ac;
