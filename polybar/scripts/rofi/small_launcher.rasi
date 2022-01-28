@@ -39,7 +39,7 @@ entry {
     background-color:               #000000;
     text-color:                     white;
     placeholder:                    "Type to search";
-        margin:                         0% 0% 0% 0%;
+    margin:                         0% 0% 0% 0%;
     padding:                        1.5% 5.5%;
     expand:                         false;
     blink:                          true;
@@ -51,7 +51,7 @@ inputbar {
     background-color:               #00000000;
     text-color:                     @bg;
     expand:                         false;
-        border:                         0% 0% 0% 0%;
+    border:                         0% 0% 0% 0%;
     border-radius:                  0px;
     border-color:                   @ac;
     margin:                         0% 0% 0% 0%;

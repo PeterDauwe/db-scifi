@@ -7,7 +7,7 @@ if [ -x "$(command -v feh)" ]; then
   feh --bg-scale $SCRIPTPATH/down.jpg
 fi
 
-leftwm -command "UnloadTheme"
+leftwm-command "UnloadTheme"
 
 pkill polybar
 #while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
