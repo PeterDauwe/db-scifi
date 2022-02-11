@@ -1,5 +1,4 @@
 #!/bin/bash
-
 export SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
 # Down the last running theme
@@ -13,16 +12,35 @@ ln -s $SCRIPTPATH/down /tmp/leftwm-theme-down
 sh $SCRIPTPATH/scripts/wal.sh
 ##############################################################################
 
+#change your keyboard if you need it - azerty or qwerty
+#setxkbmap -layout be
+keybLayout=$(setxkbmap -v | awk -F "+" '/symbols/ {print $2}')
+
+if [ $keybLayout = "be" ]; then
+  cp "$SCRIPTPATH"/config-azerty.toml ~/.config/leftwm/config.toml
+  leftwm-command "LoadTheme "$SCRIPTPATH"/config-azerty.toml"
+else
+  cp "$SCRIPTPATH"config-qwerty.toml ~/.config/leftwm/config.toml
+  leftwm-command "LoadTheme "$SCRIPTPATH"/config-qwerty.toml"
+fi
+
 # keybindings daemon
 ######### PUT YOUR PERSONAL KEYBINDS INSIDE YOUR THEME AND ADD THOSE THE THE STANDARD KEYBINDS ######
 ######### JUST BE AWARE : DOUBLE KEYBINDS WILL RESULT IN A CRASH!!!!!!!! ##########
 if [ -f "$SCRIPTPATH/sxhkd/sxhkdrc-personal" ] ; then
   # check if there is a keybinds-folder inside your personal theme and use it
-  sxhkd -c  ~/.config/leftwm/sxhkd/sxhkdrc $SCRIPTPATH/sxhkd/sxhkdrc-personal &
+  sxhkd -c ~/.config/leftwm/sxhkd/sxhkdrc $SCRIPTPATH/sxhkd/sxhkdrc-personal &
 else
   # standard keybinds
-  sxhkd -c  ~/.config/leftwm/sxhkd/sxhkdrc &
-fi  
+  sxhkd -c ~/.config/leftwm/sxhkd/sxhkdrc &
+fi
+
+function run {
+  if ! pgrep -x $(basename $1 | head -c 15) 1>/dev/null;
+  then
+    $@&
+  fi
+}
 
 # diversity of apps to start
 nm-applet &
@@ -33,6 +51,7 @@ numlockx on &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 volumeicon &
+run xfce4-clipman
 #conky -c ~/.config/leftwm/system-overview &
 #nitrogen --restore &
 #caffeine &
