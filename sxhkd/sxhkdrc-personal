@@ -7,8 +7,4 @@ super + p
     wal -t -e -i "$(< "${HOME}/.cache/wal/wal")"
 
 control + alt + n
-    leftwm-command \"SendWindowToTag 9\" \"SendWorkspaceToTag 0 8\" && discord   
-
-
-control + alt + x
- xonotic-glx
+    discord    

@@ -33,14 +33,7 @@ if [ -f "$SCRIPTPATH/sxhkd/sxhkdrc-personal" ] ; then
 else
   # standard keybinds
   sxhkd -c ~/.config/leftwm/sxhkd/sxhkdrc &
-fi
-
-function run {
-  if ! pgrep -x $(basename $1 | head -c 15) 1>/dev/null;
-  then
-    $@&
-  fi
-}
+fi  
 
 # diversity of apps to start
 nm-applet &
